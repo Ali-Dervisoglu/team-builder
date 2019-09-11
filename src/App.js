@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import TeamMember from './components/TeamMember';
+import Form from './components/Form';
 
 function App() {
   const teamMember1 = { name: "Steve", email: "steve@gmail.com", role: "Backend Engineer" };
@@ -11,6 +12,11 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <div className="form">
+          <Form 
+          teamMembers = {teamMembers}
+          setTeamMembers = {setTeamMembers}/>
+        </div>
         <div className="team-members">
           {teamMembers.map(member => {
             return (
